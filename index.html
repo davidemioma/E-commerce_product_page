@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="nav container">
+      <div class="nav_left">
+        <img class="nav_toggler" src="./images/icon-menu.svg" alt="" />
+        <img class="nav_logo" src="./images/logo.svg" alt="" />
+        <ul class="nav_list">
+          <li><a href="#" class="link">Collections</a></li>
+          <li><a href="#" class="link">Men</a></li>
+          <li><a href="#" class="link">Women</a></li>
+          <li><a href="#" class="link">About</a></li>
+          <li><a href="#" class="link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav_left">
+        <div>
+          <img src="./images/icon-cart.svg" alt="" class="cart" />
+          <span class="cart_amount"></span>
+        </div>
+        <img src="./images/image-avatar.png" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <!-- NAVIGATION MODAL -->
+    <div class="modal hidden">
+      <img class="modal_close" src="./images/icon-close.svg" alt="" />
+      <ul class="modal_list">
+        <li><a href="#" class="link">Collections</a></li>
+        <li><a href="#" class="link">Men</a></li>
+        <li><a href="#" class="link">Women</a></li>
+        <li><a href="#" class="link">About</a></li>
+        <li><a href="#" class="link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <!-- CART MODAL -->
+    <div class="cart_modal hidden"></div>
+
+    <section class="main container">
+      <!-- IMAGES SLIDER -->
+      <div class="slider">
+        <div class="slide">
+          <img src="./images/image-product-1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/image-product-2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/image-product-3.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./images/image-product-4.jpg" alt="" />
+        </div>
+
+        <button class="slider_btn slider_btn-left">&larr;</button>
+        <button class="slider_btn slider_btn-right">&rarr;</button>
+      </div>
+
+      <!-- PRODUCT CONTENT -->
+      <div class="content">
+        <h3>sneaker company</h3>
+        <h1>fall limited edition sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="prices">
+          <div class="price">
+            <h1>$125.00</h1>
+            <span class="discount">50%</span>
+          </div>
+          <p class="op">$250.00</p>
+        </div>
+
+        <div class="btm_grid">
+          <div class="quantity">
+            <button class="minus">
+              <img src="./images/icon-minus.svg" alt="" />
+            </button>
+
+            <p class="value"></p>
+
+            <button class="add">
+              <img src="./images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+
+          <button class="btn_add">
+            <img src="./images/icon-cart.svg" alt="" />
+            Add to cart
+          </button>
+        </div>
+      </div>
+
+      <div class="img_selector"></div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
