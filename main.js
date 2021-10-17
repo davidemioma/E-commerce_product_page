@@ -76,7 +76,8 @@ imgSelector.addEventListener("click", function (e) {
 //Functions
 function addToCart() {
   if (value <= 0) return;
-  const html = `<h2>Cart</h2>
+  const html = `<div class="checkout_cart">
+        <h2>Cart</h2>
         <div class="line"></div>
         <div class="checkout">
           <img
@@ -90,7 +91,9 @@ function addToCart() {
           </span>
           <img class="remove" src="./images/icon-delete.svg" alt="" />
         </div>
-        <button class="checkout_btn">Checkout</button>`;
+        <button class="checkout_btn">Checkout</button>
+      </div>
+  `;
   cartModal.insertAdjacentHTML("beforeend", html);
   cartValue++;
   cartAmount.textContent = cartValue;
@@ -100,7 +103,7 @@ function deleteFromCart(e) {
   const item = e.target;
 
   if (item.classList.contains("remove")) {
-    const cartItem = item.parentElement;
+    const cartItem = item.closest(".checkout_cart");
     cartItem.remove();
     cartValue--;
     cartAmount.textContent = cartValue;
